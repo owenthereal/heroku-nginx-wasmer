@@ -1,12 +1,12 @@
-# Run Nginx
+# Run Nginx with Wasmer on Heroku
 
-This example has Nginx compiled to WebAssembly using Emscripten.
+This example runs Nginx with [Wasmer](https://wasmer.io/) on Heroku.
 
-You can run it locally with:
+## Running
 
 ```
-wapm run nginx -p . -c nginx.conf
+heroku create APP_NAME
+heroku buildpacks:set https://github.com/jingweno/heroku-buildpack-wasmer
+git push heroku master
+curl https://APP_NAME.herokuapp.com
 ```
-
-And you will have a webserver running in:
-http://localhost:8080/
