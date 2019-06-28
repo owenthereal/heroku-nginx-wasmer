@@ -1,0 +1,7 @@
+[package]
+name = "nginx-wasm"
+version = "0.1.0"
+description = ""
+
+[dependencies]
+nginx = "0.1.1"
